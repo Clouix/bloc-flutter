@@ -4,14 +4,15 @@ import 'dart:convert';
 import 'dart:math';
 
 class GifService {
-   GifService();
+  GifService({http.Client? httpClient})
+    : _httpClient = httpClient ?? http.Client();
 
-  final http.Client _httpClient = http.Client();
+  final http.Client _httpClient;
   final String baseUrl = "api.giphy.com";
   final String endPoint = '/v1/gifs/trending';
   final String apiKey = '57zeRHOwP7SDwchSU5PJRc2DbJjBpP0A';
 
-  Future<List<String>> fetchGifs()async{
+  Future<List<String>> fetchGifs() async {
     final uri = Uri.http(baseUrl, endPoint, {'api_key': apiKey});
 
     http.Response response;
