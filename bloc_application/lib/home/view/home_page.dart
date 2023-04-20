@@ -22,7 +22,7 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Hey Gonza"),
+        title: const Text("App Ale"),
         centerTitle: true,
       ),
       body: BlocBuilder<HomeCubit, HomeState>(
