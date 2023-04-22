@@ -1,4 +1,5 @@
-import 'package:bloc_application/home/view/cubit/home_cubit.dart';
+
+import 'package:bloc_application/home/cubit/home_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gif_repository/gif_repository.dart';
